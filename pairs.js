@@ -1,7 +1,16 @@
 function pairs(names) {
+  names = names || [];
+  pairs = [];
 
-  // Your code goes here
-  
+  while (names.length > 1) {
+    pairs.push([names.getRandom(), names.getRandom()]);
+  }
+
+  if (names.length) {
+    pairs.push([names[0]]);
+  }
+
+  return pairs;
 }
 
 export default pairs;
